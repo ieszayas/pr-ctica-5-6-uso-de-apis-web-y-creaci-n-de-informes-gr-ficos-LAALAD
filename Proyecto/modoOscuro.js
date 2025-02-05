@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicios = document.querySelectorAll('.contenedor-servicios'); // Todos los elementos con esta clase
     const tableRows = document.querySelectorAll('.table-striped tbody tr'); // Filas de la tabla
     const tableCells = document.querySelectorAll('.table-striped td, .table-striped th'); // Celdas de la tabla
-
+   
 
     // Recuperar el estado del modo oscuro desde el localStorage
     const modoOscuro = localStorage.getItem('modoOscuro') === 'true';
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         servicios.forEach(servicio => servicio.classList.toggle('dark-mode'));
         tableRows.forEach(row => row.classList.toggle('dark-mode'));
         tableCells.forEach(cell => cell.classList.toggle('dark-mode'));
-
+      
         // Cambiar el texto del botón
         if (isDarkMode) {
             modoOscuroBtn.textContent = 'Modo Claro';
