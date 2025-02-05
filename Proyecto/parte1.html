@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web con Bootstrap</title>
+    <!-- Vincula Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vincula Bootstrap Icons para los iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Vincula tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="parte1.css">
+    <!-- Modo Oscuro JS -->
+    <script src="modoOscuro.js"></script>
+</head>
+
+<body>
+    <!-- Barra de navegación (navbar) -->
+    <nav class="navbar navbar-expand-lg miColorNav">
+        <div class="container-fluid">
+            <!-- Logo e texto a la izquierda -->
+            <a class="navbar-brand ms-5 d-flex align-items-center" href="#">
+                <img src="..\media\logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>Animate</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menú y buscador -->
+            <div class="collapse navbar-collapse justify-content-between mx-5" id="navbarNav">
+                <!-- Menú centrado -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="parte2.html">Novedades</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Whislist</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Debate</a>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- Botón de Modo Oscuro/Claro -->
+                <ul class="navbar-nav mx-1">
+                    <li class="nav-item">
+                        <button id="modoOscuroBtn" class="btn btn-outline-secondary">Modo Oscuro</button>
+                    </li>
+                </ul>
+
+                <!-- Buscador a la derecha -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Reloj Flotante -->
+    <div id="reloj" class="reloj">
+        Cargando hora...
+    </div>
+    <!-- Landing Page Section -->
+    <section class="py-5 miColorCabecera">
+        <div class="container text-center">
+            <!-- Título y descripción -->
+            <h1 class="display-4 fw-bold mb-3">Descubre las Mejores Películas de Animación</h1>
+            <p class="lead mb-4">
+                Sumérgete en el mundo de la animación con nuestra lista de películas rankeadas. Encuentra tus favoritas,
+                conoce sus detalles y descubre en qué plataformas están disponibles.
+            </p>
+
+            <!-- Carrusel -->
+            <div id="carouselExampleAutoplay" class="carousel slide mb-4" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Carrusel -->
+                <div class="carousel-inner">
+                    <!-- Primer Slide -->
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="..\media\chihiro.jpg" class="d-block w-350 mx-auto" alt="Película 1">
+                        <div
+                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                            <h5>El Viaje de Chihiro</h5>
+                            <p>Una obra maestra del Studio Ghibli que redefine la animación.</p>
+                        </div>
+                    </div>
+
+                    <!-- Segundo Slide -->
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="..\media\spiderman.jpg" class="d-block w-350 mx-auto" alt="Película 2">
+                        <div
+                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                            <h5>Spider-Man: Un Nuevo Universo</h5>
+                            <p>Un nuevo enfoque artístico para el icónico superhéroe.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tercer Slide -->
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="..\media\coco.jpg" class="d-block w-350 mx-auto" alt="Película 3">
+                        <div
+                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                            <h5>Coco</h5>
+                            <p>Un viaje emocionante al mundo de los vivos y los muertos.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <!-- Botón -->
+            <a href="#tabla" class="btn btn-primary btn-lg">Ver la Lista</a>
+        </div>
+    </section>
+
+    <!-- Contenedor principal -->
+    <div class="container my-5">
+        <!-- Título -->
+        <a name="tabla"></a>
+        <h2 class="text-center mb-4">Películas de Animación Rankeadas</h2>
+
+
+
+        <!-- Campo de búsqueda -->
+        <div class="d-flex justify-content-end mb-3">
+            <input type="text" id="searchInput" placeholder="Buscar película..." onkeyup="searchTable()"
+                class="form-control w-25">
+        </div>
+
+        <!-- Tabla formateada con Bootstrap -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle" id="myTable">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Portada</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Duración</th>
+                        <th scope="col">Año de Estreno</th>
+                        <th scope="col">Plataformas Disponibles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td><img src="..\media\chihiro_portada.jpg" alt="El Viaje de Chihiro">
+                        </td>
+                        <td>El Viaje de Chihiro</td>
+                        <td>125 min</td>
+                        <td>2001</td>
+                        <td><a href="https://www.netflix.com/browse">Netflix</a>, <a
+                                href="https://www.max.com/es/en">HBO Max</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td><img src="..\media\toystory.jpg" alt="Toy Story"></td>
+                        <td>Toy Story</td>
+                        <td>81 min</td>
+                        <td>1995</td>
+                        <td><a href="https://www.disneyplus.com/">Disney+</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td><img src="..\media\spiderman_portada.jpg" alt="Spider-Man: Un Nuevo Universo"></td>
+                        <td>Spider-Man: Un Nuevo Universo</td>
+                        <td>117 min</td>
+                        <td>2018</td>
+                        <td><a href="https://www.netflix.com/browse">Netflix</a>, <a
+                                href="https://www.primevideo.com/region/eu/storefront">Amazon Prime Video</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">4</td>
+                        <td><img src="..\media\shrek.jpg" alt="Shrek"></td>
+                        <td>Shrek</td>
+                        <td>90 min</td>
+                        <td>2001</td>
+                        <td><a href="https://www.primevideo.com/region/eu/storefront">Amazon Prime Video</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">5</td>
+                        <td><img src="..\media\coco_portada.jpg" alt="Coco"></td>
+                        <td>Coco</td>
+                        <td>105 min</td>
+                        <td>2017</td>
+                        <td><a href="https://www.disneyplus.com/">Disney+</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">6</td>
+                        <td><img src="..\media\comoentrenaratudragon.jpg" alt="Cómo Entrenar a tu Dragón"></td>
+                        <td>Cómo Entrenar a tu Dragón</td>
+                        <td>98 min</td>
+                        <td>2010</td>
+                        <td><a href="https://www.netflix.com/browse">Netflix</a>, <a
+                                href="https://www.primevideo.com/region/eu/storefront">Amazon Prime Video</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">7</td>
+                        <td><img src="..\media\ratatouille.jpg" alt="Ratatouille"></td>
+                        <td>Ratatouille</td>
+                        <td>111 min</td>
+                        <td>2007</td>
+                        <td><a href="https://www.disneyplus.com/">Disney+</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">8</td>
+                        <td><img src="..\media\frozen.jpg" alt="Frozen"></td>
+                        <td>Frozen</td>
+                        <td>102 min</td>
+                        <td>2013</td>
+                        <td><a href="https://www.disneyplus.com/">Disney+</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">9</td>
+                        <td><img src="..\media\losincreibles.jpg" alt="Los Increíbles"></td>
+                        <td>Los Increíbles</td>
+                        <td>115 min</td>
+                        <td>2004</td>
+                        <td><a href="https://www.disneyplus.com/">Disney+</a></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">10</td>
+                        <td><img src="..\media\laprincesamononoke.jpg" alt="La Princesa Mononoke">
+                        </td>
+                        <td>La Princesa Mononoke</td>
+                        <td>134 min</td>
+                        <td>1997</td>
+                        <td><a href="https://www.netflix.com/browse">Netflix</a>, <a
+                                href="https://www.max.com/es/en">HBO Max</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Selector de color -->
+        <div class="mt-3 text-start">
+            <label for="colorPicker">Selecciona el color de la tabla: </label>
+            <input type="color" id="colorPicker" onchange="changeTableColor()">
+        </div>
+        <!-- Apartado de Reviews Recientes en Carrusel -->
+        <h2 class="mt-5 text-center">Reviews Populares</h2>
+        <div id="reviewsCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Review 1 y 2 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-between mx-5">
+                        <!-- Review 1 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 La última aventura</h5>
+                            <p>"Una película llena de emociones y momentos memorables. Definitivamente una experiencia
+                                para repetir."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <small class="text-muted">@juunrez</small>
+                            </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 El misterio del lago</h5>
+                            <p>"Una trama intrigante y actuaciones increíbles. Sin duda una de las mejores del género."
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <small class="text-muted">@wolfing</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 y 4 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-between mx-5">
+                        <!-- Review 3 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 Viaje al futuro</h5>
+                            <p>"Efectos visuales impresionantes, pero la trama pudo ser más sólida. Aún así,
+                                entretenida."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <small class="text-muted">@avengan</small>
+                            </div>
+                        </div>
+                        <!-- Review 4 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 La carrera del viento</h5>
+                            <p>"Una película rápida, con una trama sólida pero con algunas lagunas. No está mal, pero
+                                pudo haber sido mejor."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <small class="text-muted">@daniela_93</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 5 y 6 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-between mx-5">
+                        <!-- Review 5 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 El último viaje</h5>
+                            <p>"Una película nostálgica que nos lleva por un recorrido lleno de sentimientos y lecciones
+                                de vida."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <small class="text-muted">@luis_films</small>
+                            </div>
+                        </div>
+                        <!-- Review 6 -->
+                        <div class="review-box p-4 border rounded shadow-sm mx-2" style="max-width: 48%;">
+                            <h5 class="mb-3">🎬 Sin regreso</h5>
+                            <p>"Un final inesperado y una historia fascinante. La recomiendo para quienes aman los giros
+                                en la trama."</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Calificación con iconos -->
+                                <div class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <small class="text-muted">@laura_movie</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles del carrusel -->
+            <button class="carousel-control-prev reviews-prev" type="button" data-bs-target="#reviewsCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next reviews-next" type="button" data-bs-target="#reviewsCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+
+        <!-- Carrusel de imágenes -->
+        <h2 class="text-center">Galería de Imágenes</h2>
+        <div class="container d-flex justify-content-center">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/320/240?random=1" class="d-block w-200" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/320/240?random=2" class="d-block w-200" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/320/240?random=3" class="d-block w-200" alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fila con servicios -->
+        <h2 class="text-center">Servicios</h2>
+        <div class="row contenedor-servicios">
+            <!-- Servicio 1: Registro de películas vistas -->
+            <div class="col-md-4 ">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-eye" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Tus películas vistas</h5>
+                        <p class="card-text">Te permite llevar un registro de todas las películas que has visto hasta
+                            ahora. ¡Nunca pierdas el hilo de tus favoritos!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 2: Opinión sobre tus favoritas -->
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-heart" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Opinión sobre tus favoritas</h5>
+                        <p class="card-text">Comparte tu opinión sobre tus películas favoritas y califica las que más te
+                            gustaron. ¡Ayuda a otros a encontar las mejores peliculas!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 3: Debates sociales -->
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-people" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Debates sociales</h5>
+                        <p class="card-text">Encuentra y participa en debates sobre tus películas favoritas con otros
+                            fanáticos del cine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row contenedor-servicios mt-4">
+            <!-- Servicio 4: Wishlist -->
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-bookmark" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Wishlist de películas</h5>
+                        <p class="card-text">Crea una lista de películas que deseas ver más tarde. ¡No olvides ninguna
+                            de tus pendientes!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 5: Buscador de plataformas -->
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-search" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Buscador de plataformas</h5>
+                        <p class="card-text">Encuentra fácilmente en qué plataformas están disponibles las películas que
+                            deseas ver.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 6: Suscripción de novedades -->
+            <div class="col-md-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="bi bi-bell" style="font-size: 40px;"></i>
+                        <h5 class="card-title">Suscripción y alertas</h5>
+                        <p class="card-text">Recibe sugerencias y novedades personalizadas basadas en tus gustos
+                            cinematográficos. ¡Mantente al día!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="miColorFoot py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de contacto en una columna -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Madrid</li>
+                        <li><a href="mailto:animate@enterprise.com"
+                                class="text-decoration-none">animate@enterprise.com</a></li>
+                        <li><a href="tel:+34910781333" class="text-decoration-none">+34 910 781 333</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de enlaces y políticas en otra columna -->
+                <div class="col-md-4">
+                    <h5>Enlaces y Políticas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-decoration-none">Responsabilidad Social</a></li>
+                        <li><a href="#" class="text-decoration-none">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none">Condiciones de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de redes sociales en otra columna -->
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-facebook"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-youtube"
+                            style="font-size: 24px;"></i></a>
+                </div>
+            </div>
+
+            <!-- Derechos de autor -->
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Cine Noticias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vincula Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Reloj -->
+    <script src="reloj.js"></script>
+    <!-- Color Picker -->
+    <script src="cambiarColor.js"></script>
+    <!-- Buscar Tabla -->
+    <script src="buscarTabla.js"></script>
+</body>
+
+</html>

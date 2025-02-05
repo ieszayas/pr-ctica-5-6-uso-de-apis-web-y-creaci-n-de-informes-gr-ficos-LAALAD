@@ -1,0 +1,172 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.card-body {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.miColorCabecera {
+    background-color: #f9f9f9;
+}
+
+.miColorNav {
+    background-color: #e3f2fd;
+}
+
+.miColorFoot {
+    background-color: #f0f8fd;
+}
+
+.imgCarrousel {
+    max-width: 60%;
+    height: auto;
+}
+
+.miCaption {
+    max-width: 40%;
+    max-height: 25%;
+}
+
+/* Cambiar color de las flechas a negro*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    /* Flechas negras */
+    border-radius: 50%;
+}
+
+.reviews-prev {
+    left: -75px;
+}
+
+.reviews-next {
+    right: -75px;
+}
+
+.suscribete-pos {
+    top: 20px;
+}
+
+/* Estilos generales para el cuerpo en modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #fff;
+    /* Texto blanco */
+}
+
+/* Barra de navegación en modo oscuro */
+.navbar.dark-mode {
+    background-color: #16274d;
+    /* Fondo oscuro para la barra de navegación */
+    color: #fff !important;
+    /* Texto blanco en la barra de navegación */
+}
+
+/* Nombre LOGO */
+.navbar.dark-mode span {
+    color: #fff;
+    /* Nombre blancos en la barra de navegación */
+}
+
+/* Cambiar el color de los enlaces de la barra de navegación en modo oscuro */
+.navbar.dark-mode .nav-link {
+    color: #fff;
+    /* Enlaces blancos en la barra de navegación */
+}
+
+/* Cambiar el color de los enlaces al pasar el mouse sobre ellos */
+.navbar.dark-mode .nav-link:hover {
+    color: #aae0ff;
+    /* Color más claro cuando el mouse pasa sobre el enlace */
+}
+
+/* Sección de la cabecera en modo oscuro */
+.miColorCabecera.dark-mode {
+    background-color: #1c1c1c;
+    /* Fondo más oscuro para la cabecera */
+    color: #fff;
+    /* Texto blanco en la cabecera */
+}
+
+/* Estilos generales para las filas en el modo oscuro */
+.table-striped tbody tr.dark-mode {
+    background-color: #333;
+    /* Fondo oscuro para todas las filas */
+    color: #fff;
+    /* Texto blanco para todas las filas */
+}
+
+/* Asegurar que todas las celdas de la tabla tengan texto blanco en modo oscuro */
+.table-striped td.dark-mode,
+.table-striped th.dark-mode {
+    color: #fff !important;
+    /* Texto blanco en todas las celdas */
+}
+
+/* Cabecera de la tabla en modo oscuro */
+.table-striped th.dark-mode {
+    background-color: #122755;
+    /* Fondo más oscuro para la cabecera */
+    color: #fff;
+    /* Texto blanco para los encabezados */
+}
+
+.miColorFoot.dark-mode {
+    background-color: #16274d !important;/* Fondo oscuro para el footer */    
+}
+
+.miColorFoot.dark-mode .bi {
+    /* Iconos RRSS en blanco*/
+    color: #fff !important;
+    /* Texto blanco en el footer */
+}
+
+.contenedor-servicios.dark-mode div div {
+    background-color: #363f52;
+    /* Fondo oscuro para los servicios */
+    color: #fff;
+    /* Texto blanco en los servicios */
+}
+
+/*RELOJ*/
+.reloj {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: white;
+    z-index: 999;
+}
+
+
+/* Estilo para el SELECTOR DE COLOR */
+#colorPicker {
+    margin: 20px 0;
+    padding: 5px;
+}
+
+/*Buscar tabla*/
+

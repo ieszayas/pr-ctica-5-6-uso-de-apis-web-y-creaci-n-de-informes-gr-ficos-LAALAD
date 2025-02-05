@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Novedades</title>
+    <!-- Vincula tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="parte1.css">
+    <!-- Vincula Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vincula el icono de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">   
+    <!-- Modo Oscuro JS -->
+    <script src="modoOscuro.js"></script>
+</head>
+
+<body>
+    <!-- Barra de navegación (navbar) -->
+    <nav class="navbar navbar-expand-lg miColorNav">
+        <div class="container-fluid">
+            <!-- Logo e texto a la izquierda -->
+            <a class="navbar-brand ms-5 d-flex align-items-center" href="#">
+                <img src="..\media\logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>Animate</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menú y buscador -->
+            <div class="collapse navbar-collapse justify-content-between mx-5" id="navbarNav">
+                <!-- Menú centrado -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active" aria-current="page" href="parte1.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="parte2.html">Novedades</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Whislist</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Debate</a>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <!-- Botón de Modo Oscuro/Claro -->
+                <ul class="navbar-nav mx-1">
+                    <li class="nav-item">
+                        <button id="modoOscuroBtn" class="btn btn-outline-secondary">Modo Oscuro</button>
+                    </li>
+                </ul>
+
+                <!-- Buscador a la derecha -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Contenedor Principal -->
+    <div class="container mt-5">
+        <div class="row mt-4">
+            <!-- Columna Principal de Noticias -->
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- Noticia Principal -->
+                    <div class="col-12 mb-4">
+                        <h2 class="text-uppercase text-dark"><i class="bi bi-film"></i> Estreno destacado: "La Aventura
+                            Infinita"</h2>
+                        <p class="fw-bold">Una película épica que llegará a los cines esta semana. Conoce todos los
+                            detalles de este esperado lanzamiento.</p>
+                        <img src="..\media\aventurainfinita.jpg" class="img-fluid mb-3" alt="Imagen del Estreno">
+                        <p>El mundo del cine está emocionado con el estreno de "La Aventura Infinita", una película
+                            llena de acción, drama y un elenco estelar. Las críticas ya la posicionan como una de las
+                            mejores del año.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Subcategorías -->
+                    <div class="col-md-6 mb-4">
+                        <h3 class="text-secondary">Películas Recomendadas</h3>
+                        <hr>
+                        <ul>
+                            <li><strong>🎬 "Historias de Invierno"</strong>: Un drama que ha emocionado a todos los
+                                críticos.</li>
+                            <li><strong>🎬 "El Último Guerrero"</strong>: Acción y aventura en un mundo
+                                postapocalíptico.</li>
+                            <li><strong>🎬 "La Dama en el Espejo"</strong>: Un thriller psicológico que te dejará sin
+                                palabras.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h3 class="text-secondary">Series Destacadas</h3>
+                        <hr>
+                        <ul>
+                            <li><strong>📺 "Misterios Eternos"</strong>: La serie de suspenso que todos están viendo.
+                            </li>
+                            <li><strong>📺 "Luz y Sombras"</strong>: Una producción con giros inesperados.</li>
+                            <li><strong>📺 "Fronteras del Tiempo"</strong>: Ciencia ficción y drama combinados a la
+                                perfección.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="text-secondary">Noticias Breves</h3>
+                    <hr>
+                    <!-- Noticias Breves -->
+                    <div class="col-6">
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <img src="..\media\avengers.jpg" alt="Noticia breve" class="img-fluid">
+                            </div>
+                            <div>
+                                <h4>🎥 El regreso de una saga legendaria</h4>
+                                <p>Los rumores se confirman: una de las franquicias más queridas del cine regresará con
+                                    una nueva entrega en 2025. <a href="#">Leer más</a></p>
+
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <img src="..\media\elpadrino.jpg" alt="Noticia breve" class="img-fluid">
+                            </div>
+                            <div>
+                                <h4>🎬 Anunciado el remake de "El Padrino"</h4>
+                                <p>La icónica película de Francis Ford Coppola tendrá un remake dirigido por un joven
+                                    talento de Hollywood. <a href="#">Leer más</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <img src="..\media\harrypotter.jpg" alt="Noticia breve" class="img-fluid">
+                            </div>
+                            <div>
+                                <h4>📺 Nueva serie basada en "Harry Potter"</h4>
+                                <p>El mundo mágico de J.K. Rowling regresará, pero esta vez en formato serie. Según
+                                    Warner Bros. <a href="#">Leer más</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <img src="..\media\festival.jpg" alt="Noticia breve" class="img-fluid">
+                            </div>
+                            <div>
+                                <h4>🎬 Premios del Festival de Cine</h4>
+                                <p>El Festival Internacional de Cine ha premiado a las mejores producciones del año.
+                                    Consulta la lista completa de ganadores. <a href="#">Leer más</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de Formulario -->
+            <div class="col-md-4">
+                <div class="position-sticky  bg-light p-4 rounded shadow suscribete-pos">
+                    <h2>Suscríbete a las Novedades</h2>
+                    <p>Recibe las últimas noticias y actualizaciones sobre el mundo del cine directamente en tu bandeja
+                        de entrada.</p>
+                     <!-- Formulario de suscripción -->
+        <form action="#" method="POST" id="novedadesForm" class="mt-3">
+            <!-- Nombre -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Nombre" minlength="3">
+                <div class="invalid-feedback" id="error-nombre"></div>
+            </div>
+
+            <!-- Apellidos -->
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required placeholder="Apellidos" minlength="3">
+                <div class="invalid-feedback" id="error-apellido"></div>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="ejemplo@correo.com">
+                <div class="invalid-feedback" id="error-email"></div>
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+                <div class="invalid-feedback" id="error-fechaNacimiento"></div>
+            </div>
+
+            <!-- Género -->
+            <div class="mb-3">
+                <label for="genero" class="form-label">Género Preferido</label>
+                <select class="form-select" id="genero" name="genero" required>
+                    <option value="" disabled selected>Selecciona tu género favorito</option>
+                    <option value="accion">Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="terror">Terror</option>
+                    <option value="ciencia-ficcion">Ciencia Ficción</option>
+                </select>
+                <div class="invalid-feedback" id="error-genero"></div>
+            </div>
+
+            <!-- Intereses -->
+            <div class="mb-3">
+                <label class="form-label">¿Qué te interesa más?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interesEstrenos" name="intereses" value="estrenos">
+                    <label class="form-check-label" for="interesEstrenos">Estrenos</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interesRecomendaciones" name="intereses" value="recomendaciones">
+                    <label class="form-check-label" for="interesRecomendaciones">Recomendaciones</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="interesNoticias" name="intereses" value="noticias">
+                    <label class="form-check-label" for="interesNoticias">Noticias de la industria</label>
+                </div>
+                <div class="invalid-feedback" id="error-intereses"></div>
+            </div>
+
+            <!-- Aceptar términos -->
+            <div class="mb-3 form-check text-secondary">
+                <input class="form-check-input" type="checkbox" id="terminos" required>
+                <label class="form-check-label" for="terminos">* Acepto los <a href="#">términos</a> y <a href="#">condiciones</a>.</label>
+                <div class="invalid-feedback" id="error-terminos"></div>
+            </div>
+
+            <!-- Botones -->
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary w-50" id="enviarFormulario">Suscribirse</button>
+                <button type="reset" class="btn btn-secondary w-50" id="limpiarFormulario">Limpiar</button>
+            </div>
+        </form>
+
+
+                    <!-- Toast Notificación -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <strong class="me-auto">Formulario reestablecido</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Los campos se han borrado correctamente.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toast Notificación para el formulario enviado correctamente -->
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="toastEnviar" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <strong class="me-auto">Formulario enviado correctamente</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                ¡Gracias por suscribirte! El formulario se ha enviado con éxito.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="miColorFoot py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sección de contacto en una columna -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Madrid</li>
+                        <li><a href="mailto:animate@enterprise.com"
+                                class="text-decoration-none">animate@enterprise.com</a></li>
+                        <li><a href="tel:+34910781333" class="text-decoration-none">+34 910 781 333</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de enlaces y políticas en otra columna -->
+                <div class="col-md-4">
+                    <h5>Enlaces y Políticas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-decoration-none">Responsabilidad Social</a></li>
+                        <li><a href="#" class="text-decoration-none">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none">Condiciones de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección de redes sociales en otra columna -->
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-facebook"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram"
+                            style="font-size: 24px;"></i></a>
+                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-youtube"
+                            style="font-size: 24px;"></i></a>
+                </div>
+            </div>
+
+            <!-- Derechos de autor -->
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Cine Noticias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Vincula Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vincula el boton reset JS -->
+    <script src="limpiar_notificacion.js"></script>
+    <!-- Vincula las validaciones JS -->
+    <script src="validaciones.js"></script> 
+
+</body>
+
+</html>
