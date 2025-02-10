@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiKey = "481efa3a785d32762bce6a0f1319b1ac"; // Reemplaza con tu clave de API de TMDb
+    const apiKey = "481efa3a785d32762bce6a0f1319b1ac"; // clave de API de TMDb
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es`;
 
     fetch(url)

@@ -13,11 +13,14 @@ const nombreRegex = /^[A-Za-z\s]+$/;
 const apellidoRegex = /^[A-Za-z\s]+$/;
 
 function validadoNombre() {
+    nombre.classList.remove('is-invalid','is-valid')
     if (!nombre.value.match(nombreRegex)) {
         document.getElementById("error-nombre").textContent = "El nombre solo puede contener letras y espacios.";
+        nombre.classList.add('is-invalid');
         return false;
     } else {
         document.getElementById("error-nombre").textContent = "";
+        nombre.classList.add('is-valid');
         return true;
     }
 }
