@@ -1,0 +1,20 @@
+
+/* Estilos generales para las filas en el modo oscuro */
+tr.dark-mode {
+    background-color: #333 !important;
+    /* Fondo oscuro para todas las filas */
+    color: #fff !important;
+    /* Texto blanco para todas las filas */
+}
+td.dark-mode {
+    background-color: #333 !important;
+    /* Fondo oscuro para todas las filas */
+    color: #fff !important;
+    /* Texto blanco para todas las filas */
+}
+th.dark-mode {
+    background-color: #bb1212 !important;
+    /* Fondo oscuro para todas las filas */
+    color: #fff !important;
+    /* Texto blanco para todas las filas */
+}

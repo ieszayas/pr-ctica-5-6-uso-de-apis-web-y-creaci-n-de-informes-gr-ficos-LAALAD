@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Novedades</title>
     <!-- Vincula tu hoja de estilos personalizada -->
-    <link rel="stylesheet" href="parte2.css">
-    <link rel="stylesheet" href="parte1.css">
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="tendencias.css">
     <!-- Vincula Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Vincula el icono de Bootstrap -->
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    
     <!-- Barra de navegación (navbar) -->
     <nav class="navbar navbar-expand-lg miColorNav">
         <div class="container-fluid">
@@ -33,13 +32,13 @@
                 <!-- Menú centrado -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link active" aria-current="page" href="parte1.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="inicio.html">Inicio</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="parte3.html">Tendencias</a>
+                        <a class="nav-link" href="tendencias.html">Tendencias</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="parte2.html">Novedades</a>
+                        <a class="nav-link" href="novedades.html">Novedades</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="#">Whislist</a>
@@ -77,108 +76,32 @@
         </div>
     </nav>
 
+
+
     <!-- Contenedor Principal -->
     <div class="container mt-5">
         <div class="row mt-4">
             <!-- Columna Principal de Noticias -->
             <div class="col-md-8">
-                <div class="row">
-                    <!-- Noticia Principal -->
-                    <div class="col-12 mb-4">
-                        <h2 class="text-uppercase text-dark"><i class="bi bi-film"></i> Estreno destacado: "La Aventura
-                            Infinita"</h2>
-                        <p class="fw-bold">Una película épica que llegará a los cines esta semana. Conoce todos los
-                            detalles de este esperado lanzamiento.</p>
-                        <img src="..\media\aventurainfinita.jpg" class="img-fluid mb-3" alt="Imagen del Estreno">
-                        <p>El mundo del cine está emocionado con el estreno de "La Aventura Infinita", una película
-                            llena de acción, drama y un elenco estelar. Las críticas ya la posicionan como una de las
-                            mejores del año.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!-- Subcategorías -->
-                    <div class="col-md-6 mb-4">
-                        <h3 class="text-secondary">Películas Recomendadas</h3>
-                        <hr>
-                        <ul>
-                            <li><strong>🎬 "Historias de Invierno"</strong>: Un drama que ha emocionado a todos los
-                                críticos.</li>
-                            <li><strong>🎬 "El Último Guerrero"</strong>: Acción y aventura en un mundo
-                                postapocalíptico.</li>
-                            <li><strong>🎬 "La Dama en el Espejo"</strong>: Un thriller psicológico que te dejará sin
-                                palabras.</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <h3 class="text-secondary">Series Destacadas</h3>
-                        <hr>
-                        <ul>
-                            <li><strong>📺 "Misterios Eternos"</strong>: La serie de suspenso que todos están viendo.
-                            </li>
-                            <li><strong>📺 "Luz y Sombras"</strong>: Una producción con giros inesperados.</li>
-                            <li><strong>📺 "Fronteras del Tiempo"</strong>: Ciencia ficción y drama combinados a la
-                                perfección.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <h3 class="text-secondary">Noticias Breves</h3>
-                    <hr>
-                    <!-- Noticias Breves -->
-                    <div class="col-6">
-                        <div class="d-flex mb-3">
-                            <div class="me-3">
-                                <img src="..\media\avengers.jpg" alt="Noticia breve" class="img-fluid">
-                            </div>
-                            <div>
-                                <h4>🎥 El regreso de una saga legendaria</h4>
-                                <p>Los rumores se confirman: una de las franquicias más queridas del cine regresará con
-                                    una nueva entrega en 2025. <a href="#">Leer más</a></p>
-
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="me-3">
-                                <img src="..\media\elpadrino.jpg" alt="Noticia breve" class="img-fluid">
-                            </div>
-                            <div>
-                                <h4>🎬 Anunciado el remake de "El Padrino"</h4>
-                                <p>La icónica película de Francis Ford Coppola tendrá un remake dirigido por un joven
-                                    talento de Hollywood. <a href="#">Leer más</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex mb-3">
-                            <div class="me-3">
-                                <img src="..\media\harrypotter.jpg" alt="Noticia breve" class="img-fluid">
-                            </div>
-                            <div>
-                                <h4>📺 Nueva serie basada en "Harry Potter"</h4>
-                                <p>El mundo mágico de J.K. Rowling regresará, pero esta vez en formato serie. Según
-                                    Warner Bros. <a href="#">Leer más</a></p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="me-3">
-                                <img src="..\media\festival.jpg" alt="Noticia breve" class="img-fluid">
-                            </div>
-                            <div>
-                                <h4>🎬 Premios del Festival de Cine</h4>
-                                <p>El Festival Internacional de Cine ha premiado a las mejores producciones del año.
-                                    Consulta la lista completa de ganadores. <a href="#">Leer más</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2>🎬 Películas Populares</h2>
+                <table class="table table-striped table-hover align-middle" id="myTable">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Fecha de Estreno</th>
+                            <th scope="col">Puntuación</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-peliculas">
+                    </tbody>
+                </table>
             </div>
 
             <!-- Columna de Formulario -->
             <div class="col-md-4">
-                <div class="position-sticky rounded shadow suscribete-pos" id="prueba">
-                    <div>
+                <div class="position-sticky rounded shadow suscribete-pos">
+                    <div id="prueba">
                         <h2>Suscríbete a las Novedades</h2>
                         <p>Recibe las últimas noticias y actualizaciones sobre el mundo del cine directamente en tu
                             bandeja
@@ -190,7 +113,7 @@
                                 <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" required
                                     placeholder="Nombre" minlength="3">
-                                <div class="invalid-feedback" id="error-nombre">holi</div>
+                                <div class="invalid-feedback" id="error-nombre"></div>
                             </div>
 
                             <!-- Apellidos -->
@@ -299,10 +222,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -355,14 +278,17 @@
     </footer>
 
 
-    <!-- Modo Oscuro JS -->
-    <script src="modoOscuro.js"></script>
     <!-- Vincula Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Vincula el boton reset JS -->
     <script src="limpiar_notificacion.js"></script>
     <!-- Vincula las validaciones JS -->
     <script src="validaciones.js"></script>
+    <!-- Vincula las pelis JS -->
+    <script src="peliculasPopulares.js"></script>
+    <!-- Modo Oscuro JS -->
+    <script src="modoOscuro.js"></script>
+    <script src="modoOscuroTendencias.js"></script>
 
 </body>
 
