@@ -1,20 +1,24 @@
+/* Estilos para el modo oscuro de la tabla */
+.dark-mode #myTable {
+    background-color: #333 !important;
+    color: #fff;
+}
 
-/* Estilos generales para las filas en el modo oscuro */
-tr.dark-mode {
-    background-color: #333 !important;
-    /* Fondo oscuro para todas las filas */
-    color: #fff !important;
-    /* Texto blanco para todas las filas */
+.dark-mode #myTable th {
+    background-color: #122755;
+    /* Fondo más oscuro para la cabecera */
+    color: #fff;
+    /* Texto blanco para los encabezados */
 }
-td.dark-mode {
-    background-color: #333 !important;
-    /* Fondo oscuro para todas las filas */
-    color: #fff !important;
-    /* Texto blanco para todas las filas */
+
+#myTable.dark-mode th, #myTable.dark-mode td {
+    border-color: #444;
 }
-th.dark-mode {
-    background-color: #bb1212 !important;
-    /* Fondo oscuro para todas las filas */
-    color: #fff !important;
-    /* Texto blanco para todas las filas */
+
+#myTable.dark-mode tr.dark-mode {
+    background-color: #444;
+}
+
+#myTable.dark-mode td, #myTable.dark-mode th {
+    color: #fff;
 }

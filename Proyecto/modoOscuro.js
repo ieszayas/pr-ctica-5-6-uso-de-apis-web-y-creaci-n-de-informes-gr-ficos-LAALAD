@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tableRows = document.querySelectorAll('.table-striped tbody tr'); // Filas de la tabla
     const tableCells = document.querySelectorAll('.table-striped td, .table-striped th'); // Celdas de la tabla
     const formulario = document.getElementById('prueba');
-    const tabla2 = document.getElementById('tabla2');
+    const tabla2 = document.getElementById('tablaApi');
 
 
     // Recuperar el estado del modo oscuro desde el localStorage

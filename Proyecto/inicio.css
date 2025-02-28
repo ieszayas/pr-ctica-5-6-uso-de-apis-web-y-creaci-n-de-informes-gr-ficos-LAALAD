@@ -78,7 +78,7 @@ h2 {
 body.dark-mode {
     background-color: #121212;
     /* Fondo oscuro */
-    color: #fff;
+    color: #fff !important;
     /* Texto blanco */
 }
 
