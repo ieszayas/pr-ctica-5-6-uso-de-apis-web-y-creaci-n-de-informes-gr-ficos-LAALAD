@@ -78,8 +78,11 @@ h2 {
 body.dark-mode {
     background-color: #121212;
     /* Fondo oscuro */
-    color: #fff !important;
+    color: #fff ;
     /* Texto blanco */
+}
+.dark-mode h2, .dark-mode h4, .dark-mode p, .dark-mode li{
+    color: #d1d1d1;
 }
 
 /* Barra de navegación en modo oscuro */
