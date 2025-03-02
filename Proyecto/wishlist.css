@@ -1,5 +1,11 @@
-.card {
-    margin-bottom: 20px;
+#wishlist-container, #movie-results{
+    justify-content: center;
+    gap: 20px;    
+}
+
+.card {    
+    padding: 0;
+    width: 20%;
     border: 1px solid #ddd;
     border-radius: 8px;
 }
@@ -19,5 +25,9 @@
 
 .card-text {
     font-size: 1rem;
-    color: #555;
+    color: #555 ;
+}
+
+.dark-mode .card-body {
+    background-color: rgb(3, 3, 55) !important;
 }

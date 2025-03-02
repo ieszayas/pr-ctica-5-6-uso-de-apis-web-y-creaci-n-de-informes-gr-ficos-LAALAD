@@ -182,4 +182,9 @@ body.dark-mode {
     padding: 5px;
 }
 
-/*Buscar tabla*/
+
+#myChart {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}

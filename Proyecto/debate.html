@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Wishlist</title>
-
+    <!-- Vincula tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="debate.css">
+    <link rel="stylesheet" href="inicio.css">
     <!-- Vincula Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Vincula el icono de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-    <!-- Vincula tu hoja de estilos personalizada -->
-    <link rel="stylesheet" href="wishlist.css">
-    <link rel="stylesheet" href="inicio.css">
+
 </head>
 
 <body>
 
-    <!-- Barra de navegación (navbar) -->
+    <!--Barra de navegación (navbar) -->
     <nav class="navbar navbar-expand-lg miColorNav">
         <div class="container-fluid">
             <!-- Logo e texto a la izquierda -->
@@ -44,10 +44,10 @@
                         <a class="nav-link" href="novedades.html">Novedades</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="wishlist.html">Wishlist</a>
+                        <a class="nav-link" href="wishlist.html">Wislist</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="debate.html">Debate</a>
+                        <a class="nav-link" aria-current="page" href="debate.html">Debate</a>
                     </li>
                     <li class="nav-item dropdown mx-3">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -79,26 +79,41 @@
         </div>
     </nav>
 
-    <!-- Wishlist -->
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Tu Wishlist de Películas</h2>
-        <div id="wishlist-container" class="row">
-            <!-- Wishlist vacío por ahora, se llenará con las películas agregadas -->
+        <div class="row mt-4">
+
+            <div class="col-md-8">
+                <!-- Sección de Debates Existentes -->
+                <div class="debates-container">
+                    <h4>Debates Recientes</h4>
+                    <ul id="debatesList" class="list-group">
+                        <!-- Los debates publicados aparecerán aquí -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <!-- Formulario para crear un nuevo debate -->
+                <div class="mb-4">
+                    <h4>Iniciar un nuevo debate</h4>
+                    <form id="debateForm">
+                        <div class="mb-3">
+                            <label for="debateTitle" class="form-label">Título del Debate</label>
+                            <input type="text" class="form-control" id="debateTitle"
+                                placeholder="Ingrese el título del debate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="debateContent" class="form-label">Contenido del Debate</label>
+                            <textarea class="form-control" id="debateContent" rows="4"
+                                placeholder="Escribe el contenido del debate aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Debate</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <!-- Buscador de Películas -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Buscar Películas</h2>
-        <div class="d-flex justify-content-center">
-            <input type="text" id="movie-search" class="form-control" placeholder="Buscar una película..."
-                oninput="searchMovies()">
-        </div>
-        <div id="movie-results" class="mt-4 row">
-            <!-- Resultados de la búsqueda de películas irán aquí -->
-        </div>
-    </div>
-
 
     <!-- Footer -->
     <footer class="miColorFoot py-4 mt-5">
@@ -152,8 +167,9 @@
     <script src="modoOscuro.js"></script>
     <!-- Vincula Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Vincula las wishlist JS -->
-    <script src="wishlist.js"></script>
+
+    <!-- Debate JS -->
+    <script src="debate.js"></script>
 
 </body>
 
