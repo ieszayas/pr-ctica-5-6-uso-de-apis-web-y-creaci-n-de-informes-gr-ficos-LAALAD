@@ -16,17 +16,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
-    <!-- Barra de navegación (navbar) -->
-    <nav class="navbar navbar-expand-lg miColorNav">
+<body><!-- Barra de navegación (navbar) -->
+    <nav class="navbar navbar-expand-lg miColorNav" role="navigation" aria-label="Barra de navegación principal">
         <div class="container-fluid">
             <!-- Logo e texto a la izquierda -->
-            <a class="navbar-brand ms-5 d-flex align-items-center" href="#">
-                <img src="..\media\logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <a class="navbar-brand ms-5 d-flex align-items-center" href="#" aria-label="Ir a la página de inicio">
+                <img src="..\media\logo.png" alt="Logo de Animate" style="height: 40px; margin-right: 10px;">
                 <span>Animate</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menú y buscador -->
@@ -34,51 +33,52 @@
                 <!-- Menú centrado -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="inicio.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="inicio.html"
+                            aria-label="Ir a la página de inicio">Inicio</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="tendencias.html">Tendencias</a>
+                        <a class="nav-link" aria-current="page" href="tendencias.html"
+                            aria-label="Ir a la sección de tendencias">Tendencias</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="novedades.html">Novedades</a>
+                        <a class="nav-link" href="novedades.html"
+                            aria-label="Ir a la sección de novedades">Novedades</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="wishlist.html">Wishlist</a>
+                        <a class="nav-link" href="wishlist.html" aria-label="Ir a la sección de wishlist">Wishlist</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="debate.html">Debate</a>
+                        <a class="nav-link" href="debate.html" aria-label="Ir a la sección de debate">Debate</a>
                     </li>
                     <li class="nav-item dropdown mx-3">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú desplegable">
                             Más
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 1">Opción 1</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 2">Opción 2</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 3">Opción 3</a></li>
                         </ul>
                     </li>
-
                 </ul>
 
                 <!-- Botón de Modo Oscuro/Claro -->
                 <ul class="navbar-nav mx-1">
                     <li class="nav-item">
-                        <button id="modoOscuroBtn" class="btn btn-outline-secondary">Modo Oscuro</button>
+                        <button id="modoOscuroBtn" class="btn btn-outline-secondary"
+                            aria-label="Activar modo oscuro">Modo Oscuro</button>
                     </li>
                 </ul>
 
                 <!-- Buscador a la derecha -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                <form class="d-flex" role="search" aria-label="Formulario de búsqueda">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar contenido">
+                    <button class="btn btn-outline-primary" type="submit" aria-label="Realizar búsqueda">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
-
-
 
     <!-- Contenedor Principal -->
     <div class="container mt-5">
@@ -86,12 +86,12 @@
             <!-- Columna Principal de Noticias -->
             <div class="col-md-8">
                 <!-- Grafico -->
-                <h2 class="mb-3">🥇 Rating de las películas más recientes</h2>
-                <canvas id="myChart" width="400" height="200"></canvas>
-                
+                <h2 class="mb-3" id="rating-peliculas">🥇 Rating de las películas más recientes</h2>
+                <canvas id="myChart" width="400" height="200" aria-labelledby="rating-peliculas"></canvas>
+
                 <!-- Noticias -->
-                <h2 class="mt-5 mb-3">🎬 Películas Populares</h2>
-                <table class="table table-hover align-middle" id="myTable">
+                <h2 class="mt-5 mb-3" id="peliculas-populares">🎬 Películas Populares</h2>
+                <table class="table table-hover align-middle" id="myTable" aria-labelledby="peliculas-populares">
                     <thead class="table-primary">
                         <tr>
                             <th scope="col">Imagen</th>
@@ -107,19 +107,21 @@
 
             <!-- Columna de Formulario -->
             <div class="col-md-4">
-                <div class="position-sticky rounded shadow suscribete-pos">
+                <div class="position-sticky rounded shadow suscribete-pos" role="complementary"
+                    aria-labelledby="suscripcion-header">
                     <div id="prueba">
-                        <h2>Suscríbete a las Novedades</h2>
+                        <h2 id="suscripcion-header">Suscríbete a las Novedades</h2>
                         <p>Recibe las últimas noticias y actualizaciones sobre el mundo del cine directamente en tu
-                            bandeja
-                            de entrada.</p>
+                            bandeja de entrada.</p>
+
                         <!-- Formulario de suscripción -->
-                        <form action="#" method="POST" id="novedadesForm" class="mt-3">
+                        <form action="#" method="POST" id="novedadesForm" class="mt-3"
+                            aria-labelledby="suscripcion-header">
                             <!-- Nombre -->
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre" required
-                                    placeholder="Nombre" minlength="3">
+                                    placeholder="Nombre" minlength="3" aria-describedby="error-nombre">
                                 <div class="invalid-feedback" id="error-nombre"></div>
                             </div>
 
@@ -127,7 +129,7 @@
                             <div class="mb-3">
                                 <label for="apellido" class="form-label">Apellidos</label>
                                 <input type="text" class="form-control" id="apellido" name="apellido" required
-                                    placeholder="Apellidos" minlength="3">
+                                    placeholder="Apellidos" minlength="3" aria-describedby="error-apellido">
                                 <div class="invalid-feedback" id="error-apellido"></div>
                             </div>
 
@@ -135,7 +137,7 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="email" name="email" required
-                                    placeholder="ejemplo@correo.com">
+                                    placeholder="ejemplo@correo.com" aria-describedby="error-email">
                                 <div class="invalid-feedback" id="error-email"></div>
                             </div>
 
@@ -143,14 +145,15 @@
                             <div class="mb-3">
                                 <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
                                 <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
-                                    required>
+                                    required aria-describedby="error-fechaNacimiento">
                                 <div class="invalid-feedback" id="error-fechaNacimiento"></div>
                             </div>
 
                             <!-- Género -->
                             <div class="mb-3">
                                 <label for="genero" class="form-label">Género Preferido</label>
-                                <select class="form-select" id="genero" name="genero" required>
+                                <select class="form-select" id="genero" name="genero" required
+                                    aria-describedby="error-genero">
                                     <option value="" disabled selected>Selecciona tu género favorito</option>
                                     <option value="accion">Acción</option>
                                     <option value="comedia">Comedia</option>
@@ -166,17 +169,18 @@
                                 <label class="form-label">¿Qué te interesa más?</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="interesEstrenos"
-                                        name="intereses" value="estrenos">
+                                        name="intereses" value="estrenos" aria-labelledby="interesEstrenos">
                                     <label class="form-check-label" for="interesEstrenos">Estrenos</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="interesRecomendaciones"
-                                        name="intereses" value="recomendaciones">
+                                        name="intereses" value="recomendaciones"
+                                        aria-labelledby="interesRecomendaciones">
                                     <label class="form-check-label" for="interesRecomendaciones">Recomendaciones</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="interesNoticias"
-                                        name="intereses" value="noticias">
+                                        name="intereses" value="noticias" aria-labelledby="interesNoticias">
                                     <label class="form-check-label" for="interesNoticias">Noticias de la
                                         industria</label>
                                 </div>
@@ -185,7 +189,8 @@
 
                             <!-- Aceptar términos -->
                             <div class="mb-3 form-check text-secondary">
-                                <input class="form-check-input" type="checkbox" id="terminos" required>
+                                <input class="form-check-input" type="checkbox" id="terminos" required
+                                    aria-describedby="error-terminos">
                                 <label class="form-check-label" for="terminos">* Acepto los <a href="#">términos</a> y
                                     <a href="#">condiciones</a>.</label>
                                 <div class="invalid-feedback" id="error-terminos"></div>
@@ -193,21 +198,21 @@
 
                             <!-- Botones -->
                             <div class="d-flex gap-2">
-                                <button type="submit" class="btn btn-primary w-50"
-                                    id="enviarFormulario">Suscribirse</button>
-                                <button type="reset" class="btn btn-secondary w-50"
-                                    id="limpiarFormulario">Limpiar</button>
+                                <button type="submit" class="btn btn-primary w-50" id="enviarFormulario"
+                                    aria-label="Suscribirse">Suscribirse</button>
+                                <button type="reset" class="btn btn-secondary w-50" id="limpiarFormulario"
+                                    aria-label="Limpiar formulario">Limpiar</button>
                             </div>
                         </form>
 
-
                         <!-- Toast Notificación -->
-                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                            <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="assertive"
+                            aria-atomic="true">
+                            <div id="toast" class="toast hide" role="alert">
                                 <div class="toast-header">
                                     <strong class="me-auto">Formulario reestablecido</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                        aria-label="Close"></button>
+                                        aria-label="Cerrar"></button>
                                 </div>
                                 <div class="toast-body">
                                     Los campos se han borrado correctamente.
@@ -216,13 +221,13 @@
                         </div>
 
                         <!-- Toast Notificación para el formulario enviado correctamente -->
-                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                            <div id="toastEnviar" class="toast hide" role="alert" aria-live="assertive"
-                                aria-atomic="true">
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3" aria-live="assertive"
+                            aria-atomic="true">
+                            <div id="toastEnviar" class="toast hide" role="alert">
                                 <div class="toast-header">
                                     <strong class="me-auto">Formulario enviado correctamente</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                        aria-label="Close"></button>
+                                        aria-label="Cerrar"></button>
                                 </div>
                                 <div class="toast-body">
                                     ¡Gracias por suscribirte! El formulario se ha enviado con éxito.
@@ -238,42 +243,58 @@
 
 
     <!-- Footer -->
-    <footer class="miColorFoot py-4 mt-5">
+    <footer class="miColorFoot py-4 mt-5" role="contentinfo">
         <div class="container">
             <div class="row">
                 <!-- Sección de contacto en una columna -->
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
+                <div class="col-md-4" aria-labelledby="contacto-header">
+                    <h5 id="contacto-header">Contacto</h5>
                     <ul class="list-unstyled">
                         <li>Madrid</li>
-                        <li><a href="mailto:animate@enterprise.com"
-                                class="text-decoration-none">animate@enterprise.com</a></li>
-                        <li><a href="tel:+34910781333" class="text-decoration-none">+34 910 781 333</a></li>
+                        <li>
+                            <a href="mailto:animate@enterprise.com" class="text-decoration-none"
+                                aria-label="Enviar un correo electrónico a animate@enterprise.com">
+                                animate@enterprise.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+34910781333" class="text-decoration-none"
+                                aria-label="Llamar a +34 910 781 333">
+                                +34 910 781 333
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Sección de enlaces y políticas en otra columna -->
-                <div class="col-md-4">
-                    <h5>Enlaces y Políticas</h5>
+                <div class="col-md-4" aria-labelledby="enlaces-politicas-header">
+                    <h5 id="enlaces-politicas-header">Enlaces y Políticas</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none">Quiénes Somos</a></li>
-                        <li><a href="#" class="text-decoration-none">Responsabilidad Social</a></li>
-                        <li><a href="#" class="text-decoration-none">Política de Privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none">Condiciones de Uso</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Quiénes Somos">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Responsabilidad Social">Responsabilidad
+                                Social</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Política de Privacidad">Política de
+                                Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Condiciones de Uso">Condiciones de
+                                Uso</a></li>
                     </ul>
                 </div>
 
                 <!-- Sección de redes sociales en otra columna -->
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-facebook"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-youtube"
-                            style="font-size: 24px;"></i></a>
+                <div class="col-md-4" aria-labelledby="redes-sociales-header">
+                    <h5 id="redes-sociales-header">Síguenos</h5>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Facebook">
+                        <i class="bi bi-facebook" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Twitter">
+                        <i class="bi bi-twitter" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Instagram">
+                        <i class="bi bi-instagram" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="YouTube">
+                        <i class="bi bi-youtube" style="font-size: 24px;"></i>
+                    </a>
                 </div>
             </div>
 
@@ -283,6 +304,7 @@
             </div>
         </div>
     </footer>
+
 
 
     <!-- Vincula Bootstrap JS -->

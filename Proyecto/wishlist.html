@@ -17,17 +17,16 @@
 </head>
 
 <body>
-
     <!-- Barra de navegación (navbar) -->
-    <nav class="navbar navbar-expand-lg miColorNav">
+    <nav class="navbar navbar-expand-lg miColorNav" role="navigation" aria-label="Barra de navegación principal">
         <div class="container-fluid">
             <!-- Logo e texto a la izquierda -->
-            <a class="navbar-brand ms-5 d-flex align-items-center" href="#">
-                <img src="..\media\logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <a class="navbar-brand ms-5 d-flex align-items-center" href="#" aria-label="Ir al inicio">
+                <img src="..\media\logo.png" alt="Logo de Animate" style="height: 40px; margin-right: 10px;">
                 <span>Animate</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menú y buscador -->
@@ -35,108 +34,127 @@
                 <!-- Menú centrado -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="inicio.html">Inicio</a>
+                        <a class="nav-link" href="inicio.html" aria-label="Ir a la página de inicio">Inicio</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="tendencias.html">Tendencias</a>
+                        <a class="nav-link" href="tendencias.html" aria-label="Ver tendencias">Tendencias</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="novedades.html">Novedades</a>
+                        <a class="nav-link" href="novedades.html" aria-label="Ver novedades">Novedades</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="wishlist.html">Wishlist</a>
+                        <a class="nav-link" aria-current="page" href="wishlist.html"
+                            aria-label="Ver wishlist">Wishlist</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="debate.html">Debate</a>
+                        <a class="nav-link" href="debate.html" aria-label="Ver debates">Debate</a>
                     </li>
                     <li class="nav-item dropdown mx-3">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú desplegable">
                             Más
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 1">Opción 1</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 2">Opción 2</a></li>
+                            <li><a class="dropdown-item" href="#" aria-label="Ir a la opción 3">Opción 3</a></li>
                         </ul>
                     </li>
-
                 </ul>
 
                 <!-- Botón de Modo Oscuro/Claro -->
                 <ul class="navbar-nav mx-1">
                     <li class="nav-item">
-                        <button id="modoOscuroBtn" class="btn btn-outline-secondary">Modo Oscuro</button>
+                        <button id="modoOscuroBtn" class="btn btn-outline-secondary"
+                            aria-label="Activar modo oscuro">Modo Oscuro</button>
                     </li>
                 </ul>
 
                 <!-- Buscador a la derecha -->
-                <form class="d-flex">
+                <form class="d-flex" role="search" aria-label="Formulario de búsqueda">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary" type="submit" aria-label="Enviar búsqueda">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
 
     <!-- Wishlist -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Tu Wishlist de Películas</h2>
-        <div id="wishlist-container" class="row">
+    <div class="container mt-5" role="region" aria-labelledby="wishlist-title">
+        <h2 id="wishlist-title" class="text-center mb-4">Tu Wishlist de Películas</h2>
+        <div id="wishlist-container" class="row" aria-live="polite">
             <!-- Wishlist vacío por ahora, se llenará con las películas agregadas -->
         </div>
     </div>
 
     <!-- Buscador de Películas -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Buscar Películas</h2>
+    <div class="container mt-5" role="region" aria-labelledby="search-title">
+        <h2 id="search-title" class="text-center mb-4">Buscar Películas</h2>
         <div class="d-flex justify-content-center">
+            <label for="movie-search" class="visually-hidden">Buscar una película</label>
             <input type="text" id="movie-search" class="form-control" placeholder="Buscar una película..."
-                oninput="searchMovies()">
+                oninput="searchMovies()" aria-label="Buscar una película" aria-describedby="search-description">
         </div>
-        <div id="movie-results" class="mt-4 row">
+        <div id="movie-results" class="mt-4 row" aria-live="polite" aria-labelledby="search-results-title">
             <!-- Resultados de la búsqueda de películas irán aquí -->
         </div>
+        <p id="search-description" class="visually-hidden">Introduce el nombre de la película para buscar.</p>
     </div>
 
 
     <!-- Footer -->
-    <footer class="miColorFoot py-4 mt-5">
+    <footer class="miColorFoot py-4 mt-5" role="contentinfo">
         <div class="container">
             <div class="row">
                 <!-- Sección de contacto en una columna -->
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
+                <div class="col-md-4" aria-labelledby="contacto-header">
+                    <h5 id="contacto-header">Contacto</h5>
                     <ul class="list-unstyled">
                         <li>Madrid</li>
-                        <li><a href="mailto:animate@enterprise.com"
-                                class="text-decoration-none">animate@enterprise.com</a></li>
-                        <li><a href="tel:+34910781333" class="text-decoration-none">+34 910 781 333</a></li>
+                        <li>
+                            <a href="mailto:animate@enterprise.com" class="text-decoration-none"
+                                aria-label="Enviar un correo electrónico a animate@enterprise.com">
+                                animate@enterprise.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+34910781333" class="text-decoration-none"
+                                aria-label="Llamar a +34 910 781 333">
+                                +34 910 781 333
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Sección de enlaces y políticas en otra columna -->
-                <div class="col-md-4">
-                    <h5>Enlaces y Políticas</h5>
+                <div class="col-md-4" aria-labelledby="enlaces-politicas-header">
+                    <h5 id="enlaces-politicas-header">Enlaces y Políticas</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none">Quiénes Somos</a></li>
-                        <li><a href="#" class="text-decoration-none">Responsabilidad Social</a></li>
-                        <li><a href="#" class="text-decoration-none">Política de Privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none">Condiciones de Uso</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Quiénes Somos">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Responsabilidad Social">Responsabilidad
+                                Social</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Política de Privacidad">Política de
+                                Privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none" aria-label="Condiciones de Uso">Condiciones de
+                                Uso</a></li>
                     </ul>
                 </div>
 
                 <!-- Sección de redes sociales en otra columna -->
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-facebook"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-youtube"
-                            style="font-size: 24px;"></i></a>
+                <div class="col-md-4" aria-labelledby="redes-sociales-header">
+                    <h5 id="redes-sociales-header">Síguenos</h5>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Facebook">
+                        <i class="bi bi-facebook" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Twitter">
+                        <i class="bi bi-twitter" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Instagram">
+                        <i class="bi bi-instagram" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="#" class="me-3 text-decoration-none text-dark" aria-label="YouTube">
+                        <i class="bi bi-youtube" style="font-size: 24px;"></i>
+                    </a>
                 </div>
             </div>
 

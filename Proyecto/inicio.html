@@ -14,17 +14,16 @@
 </head>
 
 <body>
-    
-    <!-- Barra de navegación (navbar) -->
+    <!-- Barra de navegación (navbar) mejorada -->
     <nav class="navbar navbar-expand-lg miColorNav">
         <div class="container-fluid">
             <!-- Logo e texto a la izquierda -->
             <a class="navbar-brand ms-5 d-flex align-items-center" href="#">
-                <img src="..\media\logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <img src="../media/logo.png" alt="Logotipo de Animate" style="height: 40px; margin-right: 10px;">
                 <span>Animate</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menú y buscador -->
@@ -48,7 +47,7 @@
                     </li>
                     <li class="nav-item dropdown mx-3">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Más
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -57,102 +56,104 @@
                             <li><a class="dropdown-item" href="#">Opción 3</a></li>
                         </ul>
                     </li>
-
                 </ul>
 
                 <!-- Botón de Modo Oscuro/Claro -->
                 <ul class="navbar-nav mx-1">
                     <li class="nav-item">
-                        <button id="modoOscuroBtn" class="btn btn-outline-secondary">Modo Oscuro</button>
+                        <button id="modoOscuroBtn" class="btn btn-outline-secondary" aria-label="Activar modo oscuro">
+                            Modo Oscuro
+                        </button>
                     </li>
                 </ul>
 
                 <!-- Buscador a la derecha -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <form class="d-flex" role="search">
+                    <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
+                    <input class="form-control me-2" type="search" id="search-input" placeholder="Buscar"
+                        aria-label="Buscar en el sitio">
                     <button class="btn btn-outline-primary" type="submit">Buscar</button>
                 </form>
             </div>
         </div>
     </nav>
+<!-- Reloj Flotante -->
+<div id="reloj" class="reloj" aria-live="polite">
+    Cargando hora...
+</div>
 
-    <!-- Reloj Flotante -->
-    <div id="reloj" class="reloj">
-        Cargando hora...
-    </div>
-    <!-- Landing Page Section -->
-    <section class="py-5 miColorCabecera">
-        <div class="container text-center">
-            <!-- Título y descripción -->
-            <h1 class="display-4 fw-bold mb-3">Descubre las Mejores Películas de Animación</h1>
-            <p class="lead mb-4">
-                Sumérgete en el mundo de la animación con nuestra lista de películas rankeadas. Encuentra tus favoritas,
-                conoce sus detalles y descubre en qué plataformas están disponibles.
-            </p>
+<!-- Landing Page Section -->
+<section class="py-5 miColorCabecera">
+    <div class="container text-center">
+        <!-- Título y descripción -->
+        <h1 class="display-4 fw-bold mb-3">Descubre las Mejores Películas de Animación</h1>
+        <p class="lead mb-4">
+            Sumérgete en el mundo de la animación con nuestra lista de películas rankeadas. Encuentra tus favoritas,
+            conoce sus detalles y descubre en qué plataformas están disponibles.
+        </p>
 
-            <!-- Carrusel -->
-            <div id="carouselExampleAutoplay" class="carousel slide mb-4" data-bs-ride="carousel">
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Carrusel -->
-                <div class="carousel-inner">
-                    <!-- Primer Slide -->
-                    <div class="carousel-item active" data-bs-interval="4000">
-                        <img src="..\media\chihiro.jpg" class="d-block w-350 mx-auto" alt="Película 1">
-                        <div
-                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
-                            <h5>El Viaje de Chihiro</h5>
-                            <p>Una obra maestra del Studio Ghibli que redefine la animación.</p>
-                        </div>
-                    </div>
-
-                    <!-- Segundo Slide -->
-                    <div class="carousel-item" data-bs-interval="4000">
-                        <img src="..\media\spiderman.jpg" class="d-block w-350 mx-auto" alt="Película 2">
-                        <div
-                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
-                            <h5>Spider-Man: Un Nuevo Universo</h5>
-                            <p>Un nuevo enfoque artístico para el icónico superhéroe.</p>
-                        </div>
-                    </div>
-
-                    <!-- Tercer Slide -->
-                    <div class="carousel-item" data-bs-interval="4000">
-                        <img src="..\media\coco.jpg" class="d-block w-350 mx-auto" alt="Película 3">
-                        <div
-                            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
-                            <h5>Coco</h5>
-                            <p>Un viaje emocionante al mundo de los vivos y los muertos.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Controles -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+        <!-- Carrusel -->
+        <div id="carouselExampleAutoplay" class="carousel slide mb-4" data-bs-ride="carousel" aria-label="Carrusel de películas destacadas">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="El Viaje de Chihiro"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="1"
+                    aria-label="Spider-Man: Un Nuevo Universo"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplay" data-bs-slide-to="2"
+                    aria-label="Coco"></button>
             </div>
 
-            <!-- Botón -->
-            <a href="#tabla" class="btn btn-primary btn-lg">Ver la Lista</a>
+            <!-- Carrusel -->
+            <div class="carousel-inner">
+                <!-- Primer Slide -->
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="../media/chihiro.jpg" class="d-block w-350 mx-auto" alt="Póster de la película El Viaje de Chihiro">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                        <h5>El Viaje de Chihiro</h5>
+                        <p>Una obra maestra del Studio Ghibli que redefine la animación.</p>
+                    </div>
+                </div>
+
+                <!-- Segundo Slide -->
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="../media/spiderman.jpg" class="d-block w-350 mx-auto" alt="Póster de la película Spider-Man: Un Nuevo Universo">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                        <h5>Spider-Man: Un Nuevo Universo</h5>
+                        <p>Un nuevo enfoque artístico para el icónico superhéroe.</p>
+                    </div>
+                </div>
+
+                <!-- Tercer Slide -->
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="../media/coco.jpg" class="d-block w-350 mx-auto" alt="Póster de la película Coco">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded miCaption mx-auto">
+                        <h5>Coco</h5>
+                        <p>Un viaje emocionante al mundo de los vivos y los muertos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplay"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplay"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-    </section>
+
+        <!-- Botón -->
+        <a href="#tabla" class="btn btn-primary btn-lg">Ver la Lista</a>
+    </div>
+</section>
 
     <!-- Contenedor principal -->
     <div class="container my-5">
@@ -508,53 +509,63 @@
 
 
     </div>
-
-    <!-- Footer -->
-    <footer class="miColorFoot py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <!-- Sección de contacto en una columna -->
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
-                    <ul class="list-unstyled">
-                        <li>Madrid</li>
-                        <li><a href="mailto:animate@enterprise.com"
-                                class="text-decoration-none">animate@enterprise.com</a></li>
-                        <li><a href="tel:+34910781333" class="text-decoration-none">+34 910 781 333</a></li>
-                    </ul>
-                </div>
-
-                <!-- Sección de enlaces y políticas en otra columna -->
-                <div class="col-md-4">
-                    <h5>Enlaces y Políticas</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none">Quiénes Somos</a></li>
-                        <li><a href="#" class="text-decoration-none">Responsabilidad Social</a></li>
-                        <li><a href="#" class="text-decoration-none">Política de Privacidad</a></li>
-                        <li><a href="#" class="text-decoration-none">Condiciones de Uso</a></li>
-                    </ul>
-                </div>
-
-                <!-- Sección de redes sociales en otra columna -->
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-facebook"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-twitter"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram"
-                            style="font-size: 24px;"></i></a>
-                    <a href="#" class="me-3 text-decoration-none text-dark"><i class="bi bi-youtube"
-                            style="font-size: 24px;"></i></a>
-                </div>
+<!-- Footer -->
+<footer class="miColorFoot py-4 mt-5" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <!-- Sección de contacto en una columna -->
+            <div class="col-md-4" aria-labelledby="contacto-header">
+                <h5 id="contacto-header">Contacto</h5>
+                <ul class="list-unstyled">
+                    <li>Madrid</li>
+                    <li>
+                        <a href="mailto:animate@enterprise.com" class="text-decoration-none" aria-label="Enviar un correo electrónico a animate@enterprise.com">
+                            animate@enterprise.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+34910781333" class="text-decoration-none" aria-label="Llamar a +34 910 781 333">
+                            +34 910 781 333
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Derechos de autor -->
-            <div class="text-center mt-4">
-                <p class="mb-0">&copy; 2025 Cine Noticias. Todos los derechos reservados.</p>
+            <!-- Sección de enlaces y políticas en otra columna -->
+            <div class="col-md-4" aria-labelledby="enlaces-politicas-header">
+                <h5 id="enlaces-politicas-header">Enlaces y Políticas</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none" aria-label="Quiénes Somos">Quiénes Somos</a></li>
+                    <li><a href="#" class="text-decoration-none" aria-label="Responsabilidad Social">Responsabilidad Social</a></li>
+                    <li><a href="#" class="text-decoration-none" aria-label="Política de Privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" class="text-decoration-none" aria-label="Condiciones de Uso">Condiciones de Uso</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de redes sociales en otra columna -->
+            <div class="col-md-4" aria-labelledby="redes-sociales-header">
+                <h5 id="redes-sociales-header">Síguenos</h5>
+                <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Facebook">
+                    <i class="bi bi-facebook" style="font-size: 24px;"></i>
+                </a>
+                <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Twitter">
+                    <i class="bi bi-twitter" style="font-size: 24px;"></i>
+                </a>
+                <a href="#" class="me-3 text-decoration-none text-dark" aria-label="Instagram">
+                    <i class="bi bi-instagram" style="font-size: 24px;"></i>
+                </a>
+                <a href="#" class="me-3 text-decoration-none text-dark" aria-label="YouTube">
+                    <i class="bi bi-youtube" style="font-size: 24px;"></i>
+                </a>
             </div>
         </div>
-    </footer>
+
+        <!-- Derechos de autor -->
+        <div class="text-center mt-4">
+            <p class="mb-0">&copy; 2025 Cine Noticias. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
 
     <!-- Vincula Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
